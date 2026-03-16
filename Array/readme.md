@@ -9,14 +9,14 @@ The goal is to build **pattern recognition**, not memorize isolated problems.
 
 These test indexing, traversal, and simple logic.
 
-- Find maximum / minimum in array  
-- Reverse an array (in-place vs extra space)  
-- Check if array is sorted  
-- Count frequency of elements  
-- Find second largest element  
-- Remove duplicates from sorted array  
-- Rotate array by k positions  
-- Move zeros to end  
+- Find maximum / minimum in array  (Done)
+- Reverse an array (in-place vs extra space)  (Done)
+- Check if array is sorted (Done)
+- Count frequency of elements (Done)
+- Find second largest element (Done)
+- Remove duplicates from sorted array (Done)
+- Rotate array by k positions (Done)
+- Move zeros to end  (Done)
 - Merge two sorted arrays  
 
 **Pattern learned:** Traversal + in-place modification
@@ -27,11 +27,11 @@ These test indexing, traversal, and simple logic.
 
 These test use of maps/sets and counting logic.
 
-- Two Sum  
-- Find duplicate number  
-- Find missing number (0…n or 1…n)  
-- Intersection of two arrays  
-- Longest consecutive sequence  
+- Two Sum (Done)
+- Find duplicate number (Done)
+- Find missing number (0…n or 1…n) (Done)
+- Intersection of two arrays (Done)
+- Longest consecutive sequence 
 - Subarray with given sum  
 - Count subarrays with sum = k  
 - Majority element (> n/2 times)
@@ -45,7 +45,7 @@ These test use of maps/sets and counting logic.
 One of the most frequently asked patterns.
 
 - Remove duplicates (two pointer)  
-- Container with most water  
+- Container with most water 
 - Trapping rain water  
 - Pair with given sum in sorted array  
 - Longest substring without repeating characters  

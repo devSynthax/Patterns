@@ -6,23 +6,24 @@
  */
 
 
-function findMaxMin(arr) {
-    if (arr.length === 0) return null;
-
-    let max = arr[0];
-    let min = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
+const minMax = (arr) => {
+    let min = Infinity;
+    let max = -Infinity;
+    
+    for(let item of arr) {
+        if(item > max) {
+            max = item;
         }
-        if (arr[i] < min) {
-            min = arr[i];
-        }   
+        
+        if(item < min) {
+            min = item;
+        }
     }
-    return { max, min };
+    
+    return [min, max];
 }
 
 // Example usage:
 const arr = [3, 1, 4, 1, 5, 9];
-const result = findMaxMin(arr);
-console.log(`Maximum: ${result.max}, Minimum: ${result.min}`);
+const result = minMax(arr);
+console.log(`Maximum: ${result[1]}, Minimum: ${result[0]}`);
