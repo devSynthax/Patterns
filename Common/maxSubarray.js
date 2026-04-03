@@ -6,15 +6,18 @@
  */
 
 function maxSubArray(nums) {
-    let maxCurrent = nums[0];
-    let maxGlobal = nums[0];
+    let currentSum = nums[0];
+    let maxSum = nums[0];
+
     for (let i = 1; i < nums.length; i++) {
-        maxCurrent = Math.max(nums[i], maxCurrent + nums[i]);
-        if (maxCurrent > maxGlobal) {
-            maxGlobal = maxCurrent;
-        }
+        // Decide whether to extend or start new
+        currentSum = Math.max(nums[i], currentSum + nums[i]);
+
+        // Update global max
+        maxSum = Math.max(maxSum, currentSum);
     }
-    return maxGlobal;
+
+    return maxSum;
 }
 // Example usage:
 const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
