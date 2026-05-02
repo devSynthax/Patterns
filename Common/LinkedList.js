@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-class LinkedList {
+class SinglyLinkedList {
     constructor() {
         this.head = null;
         this.tail = null;
@@ -190,7 +190,7 @@ class LinkedList {
 }
 
 // Usage
-const list = new LinkedList();
+const list = new SinglyLinkedList();
 
 list.unshift(2);
 list.unshift(9);
@@ -202,4 +202,4 @@ list.print();            // 9 -> 2 -> 11 -> 15 -> null
 list.insertAt(2, 10);
 list.deleteAt(0);
 list.reverse();
-list.print();
+list.print();           // 15 -> 10 -> 11 -> 2 -> null
