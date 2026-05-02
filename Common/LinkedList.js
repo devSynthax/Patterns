@@ -110,13 +110,18 @@ class LinkedList {
         return this.log(current.data);
     }
 
+    // ✅ Insert at index (not implemented)
+
+    // ✅ Delete at index (not implemented)
+
+    // ✅ Reverse list (not implemented)
+
     // Custom logger (optional utility)
     log(message, level = "LOG") {
         const time = new Date().toLocaleString();
 
-        const formatted = `[${time}] [${level}] ${
-            message instanceof Error ? message.message : message
-        }`;
+        const formatted = `[${time}] [${level}] ${message instanceof Error ? message.message : message
+            }`;
 
         switch (level.toUpperCase()) {
             case "INFO":
