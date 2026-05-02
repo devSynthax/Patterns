@@ -110,11 +110,61 @@ class LinkedList {
         return this.log(current.data);
     }
 
-    // ✅ Insert at index (not implemented)
+    // ✅ Insert at index (implemented)
+    insertAt(index, value) {
+        if (index < 0 || index > this.length) return;
 
-    // ✅ Delete at index (not implemented)
+        if (index === 0) {
+            this.unshift(value);
+            return;
+        }
 
-    // ✅ Reverse list (not implemented)
+        const newNode = new Node(value);
+        let current = this.head;
+
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        this.length++;
+    }
+
+    // ✅ Delete at index (implemented)
+    deleteAt(index) {
+        if (index < 0 || index >= this.length) return null;
+
+        if (index === 0) {
+            return this.shift();
+        }
+
+        let current = this.head;
+
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+
+        const removed = current.next.data;
+        current.next = current.next.next;
+        this.length--;
+        return removed;
+    }
+
+    // ✅ Reverse list (implemented)
+    reverse() {
+        let prev = null;
+        let current = this.head;
+
+        while (current) {
+            const next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        this.head = prev;
+    }
 
     // Custom logger (optional utility)
     log(message, level = "LOG") {
@@ -146,6 +196,10 @@ list.unshift(2);
 list.unshift(9);
 list.push(11);
 list.push(15);
-
 list.print();            // 9 -> 2 -> 11 -> 15 -> null
-list.findByIndex(2); // 11
+
+// list.findByIndex(2); // 11
+list.insertAt(2, 10);
+list.deleteAt(0);
+list.reverse();
+list.print();
